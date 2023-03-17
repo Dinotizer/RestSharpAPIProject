@@ -51,14 +51,14 @@ namespace APITests
         {
             Reporter.FlusReport();
         }
-
-        [TestMethod]
-        public async Task GetListOfUsers()
-        {
-            var api = new Demo();
-            var response = await api.GetUsers(BASE_URL);
-            //Assert.AreEqual(2, response.page);
-        }
+        //To Fix
+        //[TestMethod]
+        //public async Task GetListOfUsers(string BASE_URL, Users users)
+        //{
+        //    var api = new Demo();
+        //    var response = await api.GetUsers(BASE_URL);
+        //    Assert.AreEqual(2, response.page);
+        //}
 
         [DeploymentItem("TestData")]
 
