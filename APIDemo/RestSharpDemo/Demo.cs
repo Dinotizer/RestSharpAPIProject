@@ -1,6 +1,8 @@
 ﻿using RestSharp;
+using RestSharpDemo.Models;
 using RestSharpDemo.Models.Request;
 using System.Threading.Tasks;
+using System;
 
 namespace RestSharpDemo
 {
@@ -11,7 +13,7 @@ namespace RestSharpDemo
         {
             helper = new Helper();
         }
-        public async Task<RestResponse> GetUsers(string baseUrl)
+        public async Task<RestResponse> GetUsers(string baseUrl, Users users)
         {
             var client = helper.SetUrl(baseUrl, "api/users?page=2");
             var request = helper.CreateGetRequest();
