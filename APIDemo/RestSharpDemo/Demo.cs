@@ -13,7 +13,7 @@ namespace RestSharpDemo
         {
             helper = new Helper();
         }
-        public async Task<RestResponse> GetUsers(string baseUrl, Users users)
+        public async Task<RestResponse> GetUsers(string baseUrl, Users users)//Users arg used in APITests/GetUserListSteps.
         {
             var client = helper.SetUrl(baseUrl, "api/users?page=2");
             var request = helper.CreateGetRequest();
